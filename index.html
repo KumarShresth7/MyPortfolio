@@ -35,12 +35,82 @@
                         <img src="images/user.png">
                     </div>
                     <div class="about-col-2">
-                        <h1>About Me</h1>
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, dicta ab distinctio officiis nihil qui eius fugiat vel suscipit autem deserunt laboriosam aspernatur eos cumque vitae quae necessitatibus non quam</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Full Stack</span><br>Developing Fully Functional Web Apps</li>
+                                <li><span>AI/ML enthusiasts</span><br>Exploring the power of Machine Learning</li>
+                                <li><span>Competitive Coding Enthusiast</span><br>4★ on HackerRank</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>URJA</span><br>Tech Core</li>
+                                <li><span>Institution of Engineers of India (IEI)</span><br>Tech Core</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020</span><br>St Joseph Sr Sec School, Chandigarh</li>
+                                <li><span>2022</span><br>Shishu Niketan Public School, Chandigarh</li>
+                                <li><span>2026</span><br>Thapar Institute of Engineering and Technology, Patiala</li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div id="services">
+                <div class="container">
+                    <h1 class="sub-title">My Services</h1>
+                    <div class="services-list">
+                        <div>
+                            <h2>Web Developer</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni perspiciatis vero omnis impedit soluta, harum doloribus quam obcaecati alias assumenda consectetur odit dolor natus magnam animi fuga repudiandae quasi. Cum.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+
+                        <div>
+                            <h2>ML Services</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni perspiciatis vero omnis impedit soluta, harum doloribus quam obcaecati alias assumenda consectetur odit dolor natus magnam animi fuga repudiandae quasi. Cum.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+
+                        <div>
+                            <h2>UI/UX Design</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni perspiciatis vero omnis impedit soluta, harum doloribus quam obcaecati alias assumenda consectetur odit dolor natus magnam animi fuga repudiandae quasi. Cum.</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio">
+                <div class="container">
+                    <h1 class="sub-title">My Work</h1>
                 </div>
             </div>
         </div>
         
-        <script src="" async defer></script>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+
+                for(tabcontent of tabContents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
     </body>
 </html>
