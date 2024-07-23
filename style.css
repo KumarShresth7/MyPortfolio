@@ -17,9 +17,9 @@ body{
 .header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/KumarShresth2.png);
+    background-image: url(images/Shresth-BackGround-Photoroom.png);
     background-size: cover;
-    background-position:top 22% left 350px; /* Center the image */
+    background-position:top 33% left 350px; /* Center the image */
     background-repeat: no-repeat;
 }
 
